@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+</head>
+<body>
+<h1>Form</h1>
+
+<form>
+    <div>
+        <label for="text">Text</label>
+        <!--        <input type="text" id="text" value="typing!" readonly>-->
+        <input type="text" id="text" value="typing!">
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="enter email">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password">
+    </div>
+    <div>
+        <label for="number">Number</label>
+        <input type="number" id="number" min="0">
+    </div>
+    <div>
+        <label for="range">Range</label>
+        <input type="range" id="range" min="0" max="10" step="1">
+    </div>
+    <div>
+        <label for="date">Date</label>
+        <input type="date" id="date">
+    </div>
+    <div>
+        <label for="color">Color</label>
+        <input type="color" id="color">
+    </div>
+    <div>
+        <label for="message">Message</label>
+        <br>
+        <textarea id="message" cols="25" rows="5"></textarea>
+    </div>
+    <div>
+        <label for="sex">Pol</label>
+        <select id="sex">
+            <option value="male" selected>Men</option>
+            <option value="female">Women</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    <div>
+        <label>Count Do</label>
+        <input type="radio" name="work"> 1
+        <input type="radio" name="work"> 2
+        <input type="radio" name="work"> 5
+        <input type="radio" name="work"> 10+
+    </div>
+    <div>
+        <label>Checkbox</label>
+        <input type="checkbox" name="new"> 1
+        <input type="checkbox" name="new"> 2
+        <input type="checkbox" name="new"> 5
+        <input type="checkbox" name="new"> 10+
+    </div>
+    <!--    <input type="submit" value="Send">-->
+    <button type="submit">Send</button>
+</form>
+</body>
+</html>
