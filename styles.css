@@ -210,22 +210,28 @@ p {
 }
 
 /* Таблица опыта работы */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+.experience-table th, td {
+    padding: 10px;
+    box-shadow: 0 0 33px 0 rgba(122, 146, 184, 0.44);
+    background-color: #d6d7e0; /* Цвет фона для заголовков */
+    border: 2px solid #ddd;
 }
 
-th,
-td {
-    padding: 12px;
-    border: 1px solid #ddd;
-    text-align: left;
+/*Стиль для закругления нижних и верхних углов */
+.experience-table tr:last-child th:first-child {
+    border-radius: 10px 0 0 0;
 }
 
-th {
-    background-color: #f7f7fa;
-    font-weight: 600;
+.experience-table tr:last-child th:last-child {
+    border-radius: 0 10px 0 0;
+}
+
+.experience-table tr:last-child td:first-child {
+    border-radius: 0 0 0 10px;
+}
+
+.experience-table tr:last-child td:last-child {
+    border-radius: 0 0 10px 0;
 }
 
 /* Списки навыков и языков */
