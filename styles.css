@@ -4,7 +4,7 @@
 :root {
     --text-color: #333;
     --secondary-text-color: #555;
-    --background-color: #f4f5f7;
+    --background-color: rgba(215, 216, 230, 0.61);
     --accent-color: #768191;
     --accent-hover-color: #9aa6b8;
     --border-color: #e0e0e0;
