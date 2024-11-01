@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Переменные */
+:root {
+    --text-color: #333;
+    --secondary-text-color: #555;
+    --background-color: #f4f5f7;
+    --accent-color: #768191;
+    --accent-hover-color: #9aa6b8;
+    --border-color: #e0e0e0;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --header-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+    --button-color: #768191;
+    --button-hover-color: #9aa6b8;
+    --button-border-radius: 4px;
+    --section-background-color: rgba(193, 196, 205, 0.39);
+    --header-section-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+    --section-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Основной стиль для секций */
+section {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--section-background-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: var(--box-shadow);
+}
+
+section h3 {
+    font-size: 1.8em;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+    color: var(--secondary-text-color);
+}
+
+/* Уникальный стиль для header-section */
+.header-section {
+    text-align: center;
+    padding: 60px;
+    background-color: var(--section-background-color);
+    box-shadow: var(--header-box-shadow);
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.header-section h1 {
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin-top: 25px;
+    box-shadow: 0 10px 33px #4a250e;
+}
+
+/* Общий стиль для кнопок */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: var(--accent-hover-color);
+}
+
+/* Кнопки в download-section */
+.download-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.download-btn {
+    margin: 5px;
+}
+
+/* Стиль для contact-info секции */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 5px 33px rgba(86, 145, 234, 0.16);
+    border-radius: 100px;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+.contact-info header h3 {
+    font-size: 1.8em;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.address-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.address-container p {
+    display: flex;
+    gap: 5px;
+}
+
+.address-label {
+    font-weight: bold;
+    text-align: right;
+    min-width: 80px;
+}
+
+.address-content {
+    text-align: left;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Форма контактов */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form label {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1em;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: var(--accent-hover-color);
+}
+
+/* Таблица опыта работы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f7f7fa;
+    font-weight: 600;
+}
+
+/* Списки навыков и языков */
+.skills-list,
+.languages-list {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.8;
+}
+
+/* Стиль для футера */
+.footer-section {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--section-background-color);
+    color: var(--text-color);
+    font-size: 0.9em;
+    margin-top: 40px;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    width: 100%;
+    max-width: 800px;
+}
+
+.footer-section a {
+    color: var(--text-color);
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--border-color);
+    margin: 40px 0;
+}
