@@ -1,22 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-/* Переменные */
+/* root */
 :root {
     --text-color: #333;
     --secondary-text-color: #555;
-    --background-color: rgba(215, 216, 230, 0.61);
+    --background-color: rgb(228, 229, 237);
     --accent-color: #768191;
     --accent-hover-color: #9aa6b8;
     --border-color: #e0e0e0;
-    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     --border-radius: 8px;
-    --header-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     --button-color: #768191;
     --button-hover-color: #9aa6b8;
     --button-border-radius: 4px;
-    --section-background-color: rgba(193, 196, 205, 0.39);
+    --section-background-color: rgb(214, 215, 224);
     --header-section-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
-    --section-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --box-border: 0 0 33px 0 rgba(122, 146, 184, 0.44);
 }
 
 *,
@@ -27,6 +26,7 @@
     padding: 0;
 }
 
+/* body */
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--text-color);
@@ -38,7 +38,7 @@ body {
     align-items: center;
 }
 
-/* Основной стиль для секций */
+/* section */
 section {
     width: 100%;
     max-width: 800px;
@@ -57,18 +57,58 @@ section h3 {
     margin-bottom: 20px;
 }
 
+section h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 5px;
+}
+
+section h5 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: var(--text-color);
+    padding-bottom: 5px;
+}
+
 p {
+    margin-top: 1em;
     margin-bottom: 1em;
     line-height: 1.6;
     color: var(--secondary-text-color);
 }
 
-/* Уникальный стиль для header-section */
+/* section-item */
+.section-item {
+    margin-top: 20px;
+    font-size: 1em;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--border-color);
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--section-background-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: var(--box-shadow);
+}
+
+.section-item p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: var(--secondary-text-color);
+}
+
+/* header-section */
 .header-section {
     text-align: center;
     padding: 60px;
     background-color: var(--section-background-color);
-    box-shadow: var(--header-box-shadow);
+    box-shadow: var(--box-shadow);
     border-radius: 10px;
     margin-bottom: 40px;
 }
@@ -79,6 +119,7 @@ p {
     color: var(--text-color);
 }
 
+/* profile-image */
 .profile-image img {
     width: 200px;
     height: 200px;
@@ -87,7 +128,7 @@ p {
     box-shadow: 0 10px 33px #4a250e;
 }
 
-/* Общий стиль для кнопок */
+/* button */
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -98,60 +139,29 @@ p {
     font-weight: 500;
     transition: background-color 0.3s ease;
     text-align: center;
+    box-shadow: var(--box-border);
 }
 
 .button:hover {
     background-color: var(--accent-hover-color);
 }
 
-/* Кнопки в download-section */
+/* download-section */
 .download-section {
     text-align: center;
     margin-bottom: 40px;
 }
 
-.download-btn {
-    margin: 5px;
-}
-
-/* Стиль для contact-info секции */
+/* contact-info */
 .contact-info {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    box-shadow: 0 5px 33px rgba(86, 145, 234, 0.16);
+    box-shadow: var(--box-border);
     border-radius: 100px;
     margin-bottom: 20px;
     max-width: 800px;
-}
-
-.contact-info header h3 {
-    font-size: 1.8em;
-    color: var(--text-color);
-    margin-bottom: 20px;
-}
-
-.address-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 10px;
-}
-
-.address-container p {
-    display: flex;
-    gap: 5px;
-}
-
-.address-label {
-    font-weight: bold;
-    text-align: right;
-    min-width: 80px;
-}
-
-.address-content {
-    text-align: left;
 }
 
 .contact-info a {
@@ -168,56 +178,14 @@ p {
     margin-top: 20px;
 }
 
-/* Форма контактов */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-form label {
-    font-weight: 500;
-    color: var(--text-color);
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    font-size: 1em;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: var(--accent-color);
-}
-
-.contact-form button {
-    padding: 12px;
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    border-radius: var(--border-radius);
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: var(--accent-hover-color);
-}
-
-/* Таблица опыта работы */
+/* experience-table */
 .experience-table th, td {
     padding: 10px;
-    box-shadow: 0 0 33px 0 rgba(122, 146, 184, 0.44);
-    background-color: #d6d7e0; /* Цвет фона для заголовков */
+    box-shadow: var(--box-border);
+    background-color: var(--section-background-color);
     border: 2px solid #ddd;
 }
 
-/*Стиль для закругления нижних и верхних углов */
 .experience-table tr:last-child th:first-child {
     border-radius: 10px 0 0 0;
 }
@@ -235,14 +203,80 @@ p {
 }
 
 /* Списки навыков и языков */
-.skills-list,
-.languages-list {
+.skills-list, .languages-list {
     list-style-type: none;
     padding-left: 0;
     line-height: 1.8;
 }
 
-/* Стиль для футера */
+/* connect-form */
+.connect-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* input */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+    background-color: rgb(219, 220, 228);
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    background-color: rgb(255, 255, 255);
+    border-color: #007bff;
+    outline: none;
+}
+
+.connect-form label {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.connect-form input, .connect-form textarea {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 1em;
+}
+
+.connect-form input:focus, .connect-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.connect-form button {
+    padding: 12px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.connect-form button:hover {
+    background-color: var(--accent-hover-color);
+}
+
+/* footer-section */
 .footer-section {
     text-align: center;
     padding: 20px;
@@ -263,11 +297,4 @@ p {
 
 .footer-section a:hover {
     text-decoration: underline;
-}
-
-hr {
-    border: 0;
-    height: 1px;
-    background: var(--border-color);
-    margin: 40px 0;
 }
