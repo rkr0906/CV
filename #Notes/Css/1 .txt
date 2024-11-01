@@ -1,0 +1,41 @@
+Способы подключения CSS:
+Инлайн-стиль — используется атрибут style в теге. Удобно для уникальных стилей отдельных элементов.
+Встроенный стиль в <style> в <head> — CSS добавляется в тег <style>, что позволяет стилизовать всю страницу локально.
+Внешний файл через <link> — используется <link rel="stylesheet">, что подключает CSS-файл и позволяет использовать стили на нескольких страницах.
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Способы Подключения</title>
+
+    <!-- Способ 1: Встроенные стили в теге <style> в <head> -->
+    <style>
+        body {
+            background: #c1bdbd;
+        }
+        
+        header {
+            border: 1px solid gray;
+        }
+    </style>
+
+    <!-- Способ 2: Внешняя таблица стилей с помощью <link> в <head> -->
+    <link rel="stylesheet" href="01_selectors.css">
+</head>
+<body>
+    
+    <!-- Способ 3: Инлайн-стили прямо в теге -->
+    <header style="border: 1px solid gray">
+        <h3>Site</h3>
+    </header>
+    
+    <!-- Альтернативный вариант без инлайн-стиля, использующий стили из <style> или внешнего файла -->
+    <header>
+        <h3>Site</h3>
+    </header>
+
+</body>
+</html>

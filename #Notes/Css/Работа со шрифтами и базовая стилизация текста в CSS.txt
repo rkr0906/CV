@@ -1,0 +1,59 @@
+### Работа со шрифтами и базовая стилизация текста в CSS
+
+Цель: Изучить способы работы со шрифтами и базовую стилизацию текста в CSS, включая настройку размера, жирности, подчеркивания и других параметров.
+
+#### Подключение шрифтов:
+
+1. **Подключение внешнего шрифта с помощью @import**:
+   ```css
+   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@import позволяет подключать шрифты из внешних источников, таких как Google Fonts. В данном случае используется шрифт Roboto.
+Основные свойства для стилизации текста:
+font-family — Устанавливает шрифт текста. Например:
+
+font-family: 'Roboto', sans-serif;
+
+Если шрифт Roboto недоступен, используется sans-serif как запасной вариант.
+
+font-size — Задает размер шрифта. В примере 18px для текста в элементе <body> и 20px для элементов класса .css p.
+
+line-height — Определяет высоту строки, что влияет на интервал между строками текста. В примере значение 1.6em помогает улучшить читаемость текста.
+
+font-weight — Устанавливает насыщенность шрифта. Возможные значения:
+
+normal — нормальная насыщенность;
+bold — жирный шрифт;
+Числовые значения от 100 до 900 (например, font-weight: 700; для более жирного текста).
+text-decoration — Добавляет декорирование, такое как подчеркивание или зачеркнутый текст:
+
+underline — подчеркивание текста;
+line-through — зачеркнутый текст.
+font-style — Устанавливает курсивное начертание текста. Пример:
+
+font-style: italic;
+
+letter-spacing и word-spacing:
+
+letter-spacing — интервал между буквами;
+word-spacing — интервал между словами.
+Пример CSS кода:
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 1.6em;
+    /* Использование общего свойства font для краткости */
+    /* font: normal 20px 'Roboto', sans-serif; */
+}
+
+.css p {
+    font-family: Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+Дополнительные ссылки на документацию:
+Документация по свойству font-family: https://developer.mozilla.org/en-US/docs/Web/CSS/font-family
+Документация по свойству font-size: https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
+Документация по свойству font-weight: https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight
+Документация по text-decoration: https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration
+
