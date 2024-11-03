@@ -176,14 +176,14 @@ section strong {
 
 /* experience-table */
 .experience-table {
-    margin-top: unset;
-    color: unset;
-    border-bottom: unset;
-    background-color: unset;
-    border-radius: unset;
-    padding: unset;
-    margin-bottom: unset;
-    box-shadow: unset;
+    /*margin-top: unset;*/
+    /*color: unset;*/
+    /*border-bottom: unset;*/
+    /*background-color: unset;*/
+    /*border-radius: unset;*/
+    /*padding: unset;*/
+    /*margin-bottom: unset;*/
+    /*box-shadow: unset;*/
 }
 
 .experience-table th, td {
