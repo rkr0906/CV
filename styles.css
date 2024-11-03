@@ -302,3 +302,108 @@ textarea:focus {
     transform: scale(1.2);
     border-bottom: 4px solid var(--border-color);
 }
+
+/* --- Адаптация для планшетов (ширина экрана от 768px до 1024px) --- */
+@media (max-width: 1024px) and (min-width: 768px) {
+    /* Уменьшим размеры заголовков и отступов */
+    section h3 {
+        font-size: 1.6em;
+    }
+
+    section h4 {
+        font-size: 1.2em;
+    }
+
+    .header-section h1 {
+        font-size: 1.8em;
+    }
+
+    /* Секция профиля на планшетах */
+    .profile-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Уменьшим padding и margin */
+    section {
+        padding: 15px;
+    }
+
+    .section-item {
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    /* Кнопки */
+    .button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    /* Форма связи */
+    .connect-form input, .connect-form textarea {
+        font-size: 0.9em;
+    }
+
+    .connect-form button {
+        padding: 10px;
+    }
+}
+
+/* --- Адаптация для мобильных устройств (ширина экрана до 768px) --- */
+@media (max-width: 768px) {
+    /* Еще больше уменьшим размеры заголовков и отступов */
+    section h3 {
+        font-size: 1.4em;
+    }
+
+    section h4 {
+        font-size: 1em;
+    }
+
+    .header-section h1 {
+        font-size: 1.5em;
+    }
+
+    /* Секция профиля на мобильных устройствах */
+    .profile-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Уменьшим padding и margin */
+    section {
+        padding: 10px;
+    }
+
+    .section-item {
+        padding: 10px;
+        margin-top: 15px;
+    }
+
+    /* Кнопки */
+    .button {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    /* Таблицы и списки для компактного отображения */
+    .experience-table th, .experience-table td {
+        padding: 10px;
+    }
+
+    /* Форма связи */
+    .connect-form input, .connect-form textarea {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+
+    .connect-form button {
+        padding: 8px;
+    }
+
+    /* Контактная информация и футер */
+    .contact-info, .footer-section {
+        font-size: 0.9em;
+    }
+}
