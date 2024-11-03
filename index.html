@@ -12,26 +12,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="header-section">
+<header id="header-section" class="header-section">
     <h1>C# Розробник | Ростислав Крижанівський</h1>
     <figure class="profile-image">
         <img src="Resources/Images/avatar.jpg" alt="Фото Ростислава Крижанівського, C# розробника">
     </figure>
+    <p>Мотивований і орієнтований на результат C# розробник із досвідом у розробці бізнес-логіки, веб-додатків та
+       управлінні базами даних понад 2 роки. Я шукаю роль у динамічній команді, де зможу внести свій вклад і
+       розвиватися як професіонал. Відомий своєю увагою до деталей, пунктуальністю та здатністю вирішувати складні
+       завдання. У вільний час активно займаюся спортом, саморозвитком і вивченням нових технологій.</p>
 </header>
 <section>
-    <div class="download-section section-item">
-        <h3>Завантажити CV</h3>
+    <h3>Завантажити CV</h3>
+    <div class="download-button section-item">
         <a class="button" href="Resources/Resume/CV_Rostislav_Kryzhanovskiy.pdf" download
-           aria-label="Завантажити резюме у PDF форматі">Завантажити PDF</a>
+           aria-label="Завантажити резюме у PDF форматі">Завантажити PDF </a>
         <a class="button" href="Resources/Resume/CV_Rostislav_Kryzhanovskiy.docx" download
-           aria-label="Завантажити резюме у DOCX форматі">Завантажити DOCX</a>
+           aria-label="Завантажити резюме у DOCX форматі">Завантажити DOCX </a>
     </div>
 </section>
 <section>
-    <div class="section-item contact-info">
-        <header>
-            <h3>Контактна інформація</h3>
-        </header>
+    <h3>Контактна інформація</h3>
+    <div class="contact-info section-item">
         <p><strong>Email:</strong> <a href="mailto:newdew0992@gmail.com">newdew0992@gmail.com</a></p>
         <p><strong>Телефон:</strong> <a href="tel:+380971896354">+380 97 189 63 54</a></p>
         <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rostislav-kryzhanivskyi/"
@@ -39,52 +41,33 @@
         </p>
         <p><strong>Telegram:</strong> <a href="https://t.me/rostislavRk" target="_blank"
                                          rel="noopener noreferrer">https://t.me/rostislavRk</a></p>
-    </div>
-    <div class="contact-button">
-        <a class="button" href="#contact-me-section">Зв'язатися зі мною</a>
+        <div class="contact-button">
+            <a class="button" href="#contact-me-section">Зв'язатися зі мною</a>
+        </div>
     </div>
 </section>
-
-<section class="profile-section" id="profile-section">
-    <header>
-        <h3>Профіль</h3>
-    </header>
-    <p>
-        Мотивований і орієнтований на результат C# розробник із досвідом у розробці бізнес-логіки, веб-додатків
-        та управлінні базами даних понад 2 роки. Я шукаю роль у динамічній команді, де зможу внести свій вклад
-        і розвиватися як професіонал. Відомий своєю увагою до деталей, пунктуальністю та здатністю вирішувати
-        складні завдання.
-    </p>
-    <p>
-        У вільний час активно займаюся спортом, саморозвитком і вивченням нових технологій.
-    </p>
-</section>
-
 <section>
-    <header>
-        <h3>Навички</h3>
-    </header>
-    <ul class="skills-list">
-        <li><strong>Мови програмування:</strong> C#, JavaScript, TypeScript</li>
-        <li><strong>Фронтенд-технології:</strong> HTML, CSS</li>
-        <li><strong>Бази даних:</strong> PostgreSQL, Elasticsearch, SQL Server</li>
-        <li><strong>Принципи та підходи:</strong> OOP, SOLID, TDD, CQRS, Event Sourcing
-        </li>
-        <li><strong>Фреймворки та бібліотеки:</strong> ASP.NET Core, MVC, RESTful API,
-                                                       React, Next.js
-        </li>
-        <li><strong>Інструменти та сервіси:</strong> Git, GitLab, Swagger, Serilog,
-                                                     Fiddler Classic, HubSpot, CI/CD,
-                                                     AWS, Postman, Docker
-        </li>
-    </ul>
+    <h3>Навички</h3>
+    <div class="section-item">
+        <ul class="skills-list">
+            <li><strong>Мови програмування:</strong> C#, JavaScript, TypeScript</li>
+            <li><strong>Фронтенд-технології:</strong> HTML, CSS</li>
+            <li><strong>Бази даних:</strong> PostgreSQL, Elasticsearch, SQL Server</li>
+            <li><strong>Принципи та підходи:</strong> OOP, SOLID, TDD, CQRS, Event Sourcing
+            </li>
+            <li><strong>Фреймворки та бібліотеки:</strong> ASP.NET Core, MVC, RESTful API,
+                                                           React, Next.js
+            </li>
+            <li><strong>Інструменти та сервіси:</strong> Git, GitLab, Swagger, Serilog,
+                                                         Fiddler Classic, HubSpot, CI/CD,
+                                                         AWS, Postman, Docker
+            </li>
+        </ul>
+    </div>
 </section>
-
-<section id="experience-section" class="section-item">
-    <header>
+<section id="experience-section">
+    <div class="experience-table section-item">
         <h3>Досвід роботи</h3>
-    </header>
-    <div class="experience-table">
         <table>
             <thead>
             <tr>
@@ -106,75 +89,51 @@
             </tr>
             </tbody>
         </table>
-        <div class="section-item">
-            <header>
-                <h4>C# Розробник, Snaily</h4>
-                <h5>Київ, червень 2022 — дотепер</h5>
-            </header>
-            <p><strong>Проєкт:</strong> Розробка та підтримка сервісу для генерації лідів у LinkedIn.</p>
-            <p><strong>Рефакторинг і міграція коду:</strong> Переніс бізнес-логіку з JavaScript на C#, що дозволило
-                                                             додатку
-                                                             працювати автономно, значно покращивши надійність
-                                                             системи.
-            </p>
-            <p><strong>Тестування:</strong> Розробив і впровадив тести за допомогою xUnit та Moq, що підвищило
-                                            якість
-                                            коду
-                                            та спростило подальшу підтримку.</p>
-            <p><strong>Розширення функціональності:</strong> Інтеграція з Webshare.io, дозволяючи клієнтам
-                                                             використовувати
-                                                             окремі порти, що збільшило кількість користувачів і
-                                                             зручність.
-            </p>
-            <p><strong>Використання сучасної архітектури:</strong> Реалізація Event Sourcing у поєднанні з CQRS для
-                                                                   обробки
-                                                                   команд.
-            </p>
-            <p><strong>Інтеграції:</strong> Підключення до HubSpot CRM для автоматизації процесів.
-            </p>
-            <p><strong>Логування:</strong> Використовував Serilog для ефективного та детального логування, що
-                                           сприяло
-                                           кращому моніторингу та налагодженню.
-            </p>
-            <p><strong>Управління базами даних:</strong> Досвід роботи з Elasticsearch, Kibana, PostgreSQL і SQL
-                                                         Server
-                                                         для
-                                                         ефективного управління даними та оптимізації
-                                                         продуктивності.
-            </p>
-            <p><strong>CI/CD:</strong> Участь у процесах ci/cd і рев'ю коду, сприяючи постійному підвищенню якості
-                                       розробки
-                                       та інтеграції.
-            </p>
-        
-        </div>
-        <div class="section-item">
-            <header>
-                <h4>Автоелектрик-діагностик, Приватний підприємець</h4>
-                <h5>Київ, червень 2011 — червень 2022</h5>
-            </header>
-            <p><strong>Управління та обслуговування:</strong> Успішно керував автосервісом протягом 11 років,
-                                                              працюючи
-                                                              автоелектриком, виконуючи складні ремонти.</p>
-            <p><strong>Ремонт та налаштування:</strong> Ремонтував блоки управління та розробляв системи захисту від
-                                                        крадіжок для цивільних і спортивних автомобілів.</p>
-            <p><strong>Інтеграція та оновлення:</strong> Налаштовував та оновлював прошивку процесорів і
-                                                         мікроконтролерів,
-                                                         інтегрував нові компоненти в мережу CAN.</p>
-            <p><strong>Результати:</strong> Успішно відремонтував понад 3000 автомобілів, демонструючи високий
-                                            рівень
-                                            професіоналізму та ефективності.</p>
-        </div>
     </div>
-</section>
-
-<section id="education-section">
-    <header class="education-header">
-        <h3>Освіта</h3>
-    </header>
+    <div class="section-item">
+        <h4>C# Розробник, Snaily</h4>
+        <h5>Київ, червень 2022 — дотепер</h5>
+        <p><strong>Проєкт:</strong> Розробка та підтримка сервісу для генерації лідів у LinkedIn.</p>
+        <p><strong>Рефакторинг і міграція коду:</strong> Переніс бізнес-логіку з JavaScript на C#, що дозволило додатку
+                                                         працювати автономно, значно покращивши надійність системи.</p>
+        <p><strong>Тестування:</strong> Розробив і впровадив тести за допомогою xUnit та Moq, що підвищило якість коду
+                                        та спростило подальшу підтримку.</p>
+        <p><strong>Розширення функціональності:</strong> Інтеграція з Webshare.io, дозволяючи клієнтам використовувати
+                                                         окремі порти, що збільшило кількість користувачів і зручність.
+        </p>
+        <p><strong>Використання сучасної архітектури:</strong> Реалізація Event Sourcing у поєднанні з CQRS для обробки
+                                                               команд.</p>
+        <p><strong>Інтеграції:</strong> Підключення до HubSpot CRM для автоматизації процесів.</p>
+        <p><strong>Логування:</strong> Використовував Serilog для ефективного та детального логування, що сприяло
+                                       кращому моніторингу та налагодженню.</p>
+        <p><strong>Управління базами даних:</strong> Досвід роботи з Elasticsearch, Kibana, PostgreSQL і SQL Server для
+                                                     ефективного управління даними та оптимізації продуктивності.</p>
+        <p><strong>CI/CD:</strong> Участь у процесах ci/cd і рев'ю коду, сприяючи постійному підвищенню якості розробки
+                                   та інтеграції.</p>
+    </div>
     <div class="section-item">
         <header>
-            <h4><strong>C# Розробник, Dev School</strong></h4>
+            <h4>Автоелектрик-діагностик, Приватний підприємець</h4>
+            <h5>Київ, червень 2011 — червень 2022</h5>
+        </header>
+        <p><strong>Управління та обслуговування:</strong> Успішно керував автосервісом протягом 11 років,
+                                                          працюючи
+                                                          автоелектриком, виконуючи складні ремонти.</p>
+        <p><strong>Ремонт та налаштування:</strong> Ремонтував блоки управління та розробляв системи захисту від
+                                                    крадіжок для цивільних і спортивних автомобілів.</p>
+        <p><strong>Інтеграція та оновлення:</strong> Налаштовував та оновлював прошивку процесорів і
+                                                     мікроконтролерів,
+                                                     інтегрував нові компоненти в мережу CAN.</p>
+        <p><strong>Результати:</strong> Успішно відремонтував понад 3000 автомобілів, демонструючи високий
+                                        рівень
+                                        професіоналізму та ефективності.</p>
+    </div>
+</section>
+<section id="education-section">
+    <h3>Освіта</h3>
+    <div class="section-item">
+        <header>
+            <h4>C# Розробник, Dev School</h4>
             <h5>Київ, червень 2022 — січень 2023</h5>
         </header>
         <p>
@@ -185,7 +144,7 @@
     </div>
     <div class="section-item">
         <header>
-            <h4><strong>Молодший бакалавр, Автомобільно-дорожній коледж</strong></h4>
+            <h4>Молодший бакалавр, Автомобільно-дорожній коледж</h4>
             <h5>Житомир, вересень 2007 — червень 2011</h5>
         </header>
         <p>
@@ -193,63 +152,89 @@
         </p>
     </div>
 </section>
-
 <section id="languages-section">
-    <header class="languages-header">
-        <h3>Мови</h3>
-    </header>
-    <ul class="languages-list">
-        <li>Англійська</li>
-        <li>Українська</li>
-        <li>Російська</li>
-    </ul>
+    <h3>Мови</h3>
+    <div class="section-item">
+        <ul class="languages-list">
+            <li>Англійська</li>
+            <li>Українська</li>
+            <li>Російська</li>
+        </ul>
+    </div>
 </section>
-
 <section id="additional-info-section">
-    <header class="additional-info-header">
-        <h3>Додаткова інформація</h3>
-    </header>
-    <p>
-        <strong>Інтереси:</strong> Цікавлюся мікросервісами та системами з високим навантаженням, прагну розвиватися
-                                   в цьому напрямку. У вільний час люблю займатися спортом, читати, подорожувати та
-                                   працювати над самовдосконаленням.
-    </p>
-    <p><strong>Мотивація:</strong> Шукаю роль у команді, що цінує ініціативу, відповідальність та прагнення до
-                                   постійного вдосконалення. Готовий зробити внесок у розвиток компанії та рости
-                                   разом із нею.
-    </p>
+    <h3>Додаткова інформація</h3>
+    <div class="section-item">
+        <p>
+            <strong>Інтереси:</strong> Цікавлюся мікросервісами та системами з високим навантаженням, прагну розвиватися
+                                       в цьому напрямку. У вільний час люблю займатися спортом, читати, подорожувати та
+                                       працювати над самовдосконаленням.
+        </p>
+        <p><strong>Мотивація:</strong> Шукаю роль у команді, що цінує ініціативу, відповідальність та прагнення до
+                                       постійного вдосконалення. Готовий зробити внесок у розвиток компанії та рости
+                                       разом із нею.
+        </p>
+    </div>
 </section>
-
 <section id="contact-me-section">
-    <header>
-        <h3>Зв'язатися зі мною</h3>
-    </header>
-    <form class="connect-form">
-        <div>
-            <label for="your-name">Ваше ім'я:</label>
-            <input type="text" id="your-name" name="userName" placeholder="Введіть ваше ім'я">
-        </div>
-        <div>
-            <label for="your-email">Ваш email:</label>
-            <input type="email" id="your-email" name="userEmail" placeholder="Введіть ваш email">
-        </div>
-        <div>
-            <label for="message">Повідомлення:</label>
-            <textarea class="connect-form-input" id="message" name="userMessage" cols="69" rows="5"
-                      placeholder="Введіть повідомлення..."></textarea>
-        </div>
-        <div>
-            <button class="button" type="submit">Надіслати</button>
-        </div>
-    </form>
+    <h3>Зв'язатися зі мною</h3>
+    <div class="section-item">
+        <form class="connect-form">
+            <div>
+                <label for="your-name">Ваше ім'я:</label>
+                <input type="text" id="your-name" name="userName" placeholder="Введіть ваше ім'я">
+            </div>
+            <div>
+                <label for="your-email">Ваш email:</label>
+                <input type="email" id="your-email" name="userEmail" placeholder="Введіть ваш email">
+            </div>
+            <div>
+                <label for="message">Повідомлення:</label>
+                <textarea class="connect-form-input" id="message" name="userMessage" cols="69" rows="5"
+                          placeholder="Введіть повідомлення..."></textarea>
+            </div>
+            <div>
+                <button class="button" type="submit">Надіслати</button>
+            </div>
+        </form>
+    </div>
 </section>
-
-<footer class="footer-section">
-    <div><strong>Контакти:</strong> <a href="mailto:newdew0992@gmail.com">newdew0992@gmail.com</a>, <a
-            href="https://t.me/rostislavRk" target="_blank">@rostislavRk</a></div>
-    <div><a href="#profile-section">Профіль</a> | <a href="#experience-section">Досвід роботи</a> | <a
-            href="#education-section">Освіта</a> | <a href="#contact-me-section">Зв'язатися зі мною</a></div>
-    <div>© 2024 Ростислав Крижанівський. Всі права захищені.</div>
-</footer>
+<section>
+    <div class="section-item footer-section">
+        <header>
+            <h4>Контакти:</h4>
+        </header>
+        <div><a href="mailto:newdew0992@gmail.com">newdew0992@gmail.com</a>, <a
+                href="https://t.me/rostislavRk" target="_blank">@rostislavRk</a></div>
+        <div><a href="#header-section">Профіль</a> | <a href="#experience-section">Досвід роботи</a> | <a
+                href="#education-section">Освіта</a> | <a href="#contact-me-section">Зв'язатися зі мною</a></div>
+        <div>© 2024 Ростислав Крижанівський. Всі права захищені.</div>
+    </div>
+</section>
 </body>
 </html>
+<script>
+    function isElementInCenterRange(element) {
+        const rect = element.getBoundingClientRect();
+        const screenCenterY = window.innerHeight / 2 - 38;
+        const offset = 38;
+        return rect.top < screenCenterY + offset && rect.bottom > screenCenterY - offset;
+    }
+    
+    function onScroll() {
+        const sectionItems = document.querySelectorAll('.section-item');
+        let lastCenteredElement = null;
+        sectionItems.forEach((sectionItem) => {
+            sectionItem.classList.remove('centered');
+            if (isElementInCenterRange(sectionItem)) {
+                lastCenteredElement = sectionItem;
+            }
+        });
+        if (lastCenteredElement) {
+            lastCenteredElement.classList.add('centered');
+        }
+    }
+    
+    window.addEventListener('scroll', onScroll);
+</script>
+
