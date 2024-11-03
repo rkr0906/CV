@@ -13,6 +13,7 @@
     --section-background-color: rgb(214, 215, 224);
     --box-border: 0 0 33px 0 rgba(122, 146, 184, 0.44);
     --margin-bottom: 30px;
+    --side-padding: 15px; /* обязательные поля по бокам */
 }
 
 *,
@@ -32,6 +33,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: var(--side-padding);
+    padding-right: var(--side-padding);
 }
 
 /* section */
@@ -305,105 +308,118 @@ textarea:focus {
 
 /* --- Адаптация для планшетов (ширина экрана от 768px до 1024px) --- */
 @media (max-width: 1024px) and (min-width: 768px) {
-    /* Уменьшим размеры заголовков и отступов */
-    section h3 {
-        font-size: 1.6em;
+    .header-section {
+        padding: 20px;
+        max-width: 90%;
     }
 
-    section h4 {
-        font-size: 1.2em;
-    }
-
-    .header-section h1 {
-        font-size: 1.8em;
-    }
-
-    /* Секция профиля на планшетах */
     .profile-image img {
         width: 150px;
         height: 150px;
     }
 
-    /* Уменьшим padding и margin */
-    section {
-        padding: 15px;
+    section h3, section h4 {
+        font-size: 1.4em;
     }
 
-    .section-item {
-        padding: 15px;
-        margin-top: 20px;
-    }
-
-    /* Кнопки */
     .button {
         padding: 8px 16px;
         font-size: 0.9em;
     }
 
-    /* Форма связи */
-    .connect-form input, .connect-form textarea {
-        font-size: 0.9em;
+    .experience-table th, .experience-table td {
+        padding: 15px;
     }
 
-    .connect-form button {
-        padding: 10px;
+    .contact-info, .footer-section {
+        font-size: 0.9em;
     }
 }
 
 /* --- Адаптация для мобильных устройств (ширина экрана до 768px) --- */
 @media (max-width: 768px) {
-    /* Еще больше уменьшим размеры заголовков и отступов */
-    section h3 {
-        font-size: 1.4em;
-    }
-
-    section h4 {
-        font-size: 1em;
+    .header-section {
+        padding: 20px;
+        max-width: 95%;
     }
 
     .header-section h1 {
         font-size: 1.5em;
     }
 
-    /* Секция профиля на мобильных устройствах */
     .profile-image img {
         width: 120px;
         height: 120px;
     }
 
-    /* Уменьшим padding и margin */
-    section {
-        padding: 10px;
+    section h3 {
+        font-size: 1.2em;
     }
 
-    .section-item {
-        padding: 10px;
-        margin-top: 15px;
+    section h4 {
+        font-size: 1em;
     }
 
-    /* Кнопки */
+    .experience-table {
+        font-size: 0.9em;
+        width: 100%;
+    }
+
+    .experience-table th, .experience-table td {
+        padding: 8px;
+    }
+
     .button {
         padding: 6px 12px;
         font-size: 0.8em;
     }
 
-    /* Таблицы и списки для компактного отображения */
-    .experience-table th, .experience-table td {
-        padding: 10px;
-    }
-
-    /* Форма связи */
-    .connect-form input, .connect-form textarea {
-        font-size: 0.8em;
-        padding: 8px;
-    }
-
-    .connect-form button {
-        padding: 8px;
-    }
-
-    /* Контактная информация и футер */
     .contact-info, .footer-section {
         font-size: 0.9em;
+    }
+}
+
+/* --- Адаптация для самых маленьких экранов (ширина экрана до 480px) --- */
+@media (max-width: 480px) {
+    .header-section {
+        padding: 15px;
+        max-width: 95%;
+    }
+
+    .header-section h1 {
+        font-size: 1.3em;
+    }
+
+    .profile-image img {
+        width: 100px;
+        height: 100px;
+    }
+
+    section h3 {
+        font-size: 1.1em;
+    }
+
+    section h4 {
+        font-size: 0.9em;
+    }
+
+    /* Оптимизация таблицы опыта работы */
+    .experience-table {
+        font-size: 0.8em;
+        width: 100%;
+    }
+
+    .experience-table th, .experience-table td {
+        padding: 6px;
+        font-size: 0.8em;
+    }
+
+    .button {
+        padding: 5px 10px;
+        font-size: 0.7em;
+    }
+
+    .contact-info, .footer-section {
+        font-size: 0.8em;
     }
 }
