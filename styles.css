@@ -2,19 +2,15 @@
 
 /* root */
 :root {
-    --text-color: #333;
-    --secondary-text-color: #555;
+    --text-color: #000000;
     --background-color: rgb(228, 229, 237);
-    --accent-color: #768191;
+    --strong-color: #494848;
     --accent-hover-color: #9aa6b8;
     --border-color: #e0e0e0;
     --border-radius: 8px;
     --box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     --button-color: #768191;
-    --button-hover-color: #9aa6b8;
-    --button-border-radius: 4px;
     --section-background-color: rgb(214, 215, 224);
-    --header-section-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
     --box-border: 0 0 33px 0 rgba(122, 146, 184, 0.44);
     --margin-bottom: 30px;
 }
@@ -30,7 +26,6 @@
 /* body */
 body {
     font-family: 'Roboto', sans-serif;
-    color: var(--text-color);
     background-color: var(--background-color);
     margin: 0;
     padding: 0;
@@ -51,14 +46,15 @@ section {
 }
 
 section h3 {
+    text-align: center;
     font-size: 1.8em;
     color: var(--text-color);
-    border-bottom: 2px solid var(--border-color);
     padding-bottom: 5px;
     margin-bottom: 20px;
 }
 
 section h4 {
+    text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 1.3em;
@@ -75,44 +71,53 @@ section h5 {
     color: var(--text-color);
 }
 
-
 p {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin: 1em 10px;
     line-height: 1.6;
-    color: var(--secondary-text-color);
+}
+
+section strong {
+    color: var(--strong-color);
 }
 
 /* section-item */
 .section-item {
-    margin-top: 20px;
-    font-size: 1em;
+    margin-top: 40px;
     color: var(--text-color);
     border-bottom: 2px solid var(--border-color);
-    width: 100%;
-    max-width: 800px;
     background-color: var(--section-background-color);
     border-radius: var(--border-radius);
     padding: 20px;
-    margin-bottom: 40px;
+    margin-bottom: var(--margin-bottom);
     box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.section-item p {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    line-height: 1.6;
-    color: var(--secondary-text-color);
+.section-item.centered {
+    background-color: var(--section-background-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: var(--margin-bottom);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    transform: scale(1.2);
+    border-bottom: 4px solid var(--border-color);
 }
 
 /* header-section */
 .header-section {
+    max-width: 1000px;
     text-align: center;
-    padding: 60px;
+    padding: 40px;
     background-color: var(--section-background-color);
     box-shadow: var(--box-shadow);
     border-radius: 10px;
     margin-bottom: var(--margin-bottom);
+}
+
+.header-section p {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 10px;
 }
 
 .header-section h1 {
@@ -134,7 +139,7 @@ p {
 .button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: var(--accent-color);
+    background-color: var(--button-color);
     color: white;
     text-decoration: none;
     border-radius: var(--border-radius);
@@ -148,48 +153,41 @@ p {
     background-color: var(--accent-hover-color);
 }
 
-/* download-section */
-.download-section {
-    text-align: center;
-    margin-bottom: var(--margin-bottom);
-}
-
-/* contact-info */
-.contact-info h3 {
-    text-align: center;
-}
-
-.contact-info a {
-    color: #007bff;
+/* contact-info & download-button */
+.contact-info a, .footer-section a {
+    color: rgb(66, 120, 245);
     text-decoration: none;
 }
 
-.contact-info a:hover {
+.contact-info a:hover, .footer-section a:hover {
     text-decoration: underline;
 }
 
-.contact-button {
+.contact-button, .download-button, .download-button a, .contact-button a {
+    color: white;
+    text-decoration: none;
     text-align: center;
-    margin-bottom: var(--margin-bottom);
+    margin: 15px;
+}
+
+.contact-button a:hover {
+    text-decoration: none;
 }
 
 /* experience-table */
 .experience-table {
-    /*margin-top: 20px;*/
-    /*font-size: 1em;*/
-    /*color: var(--text-color);*/
-    /*border-bottom: 2px solid var(--border-color);*/
-    /*width: 100%;*/
-    /*max-width: 800px;*/
-    /*background-color: var(--section-background-color);*/
-    /*border-radius: var(--border-radius);*/
-    padding: 20px;
-    /*margin-bottom: 10px;*/
-    /*box-shadow: var(--box-shadow);*/
+    margin-top: unset;
+    color: unset;
+    border-bottom: unset;
+    background-color: unset;
+    border-radius: unset;
+    padding: unset;
+    margin-bottom: unset;
+    box-shadow: unset;
 }
 
 .experience-table th, td {
-    padding: 10px;
+    padding: 20px;
     box-shadow: var(--box-border);
     background-color: var(--section-background-color);
     border: 2px solid #ddd;
@@ -269,12 +267,12 @@ textarea:focus {
 
 .connect-form input:focus, .connect-form textarea:focus {
     outline: none;
-    border-color: var(--accent-color);
+    border-color: var(--strong-color);
 }
 
 .connect-form button {
     padding: 12px;
-    background-color: var(--accent-color);
+    background-color: var(--button-color);
     color: white;
     border: none;
     border-radius: var(--border-radius);
@@ -290,22 +288,17 @@ textarea:focus {
 /* footer-section */
 .footer-section {
     text-align: center;
-    padding: 20px;
+    color: var(--text-color);
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.footer-section:hover {
     background-color: var(--section-background-color);
-    color: var(--text-color);
-    font-size: 0.9em;
-    margin-top: 40px;
-    border-radius: 0 0 var(--border-radius) var(--border-radius);
-    width: 100%;
-    max-width: 800px;
-}
-
-.footer-section a {
-    color: var(--text-color);
-    margin: 0 5px;
-    text-decoration: none;
-}
-
-.footer-section a:hover {
-    text-decoration: underline;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: var(--margin-bottom);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    transform: scale(1.2);
+    border-bottom: 4px solid var(--border-color);
 }
