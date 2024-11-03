@@ -214,6 +214,8 @@
 </body>
 </html>
 <script>
+    let currentCenteredElement = null;
+    
     function isElementInCenterRange(element) {
         const rect = element.getBoundingClientRect();
         const screenCenterY = window.innerHeight / 2 - 38;
@@ -225,13 +227,16 @@
         const sectionItems = document.querySelectorAll('.section-item');
         let lastCenteredElement = null;
         sectionItems.forEach((sectionItem) => {
-            sectionItem.classList.remove('centered');
             if (isElementInCenterRange(sectionItem)) {
                 lastCenteredElement = sectionItem;
             }
         });
-        if (lastCenteredElement) {
+        if (lastCenteredElement && lastCenteredElement !== currentCenteredElement) {
+            if (currentCenteredElement) {
+                currentCenteredElement.classList.remove('centered');
+            }
             lastCenteredElement.classList.add('centered');
+            currentCenteredElement = lastCenteredElement;
         }
     }
     
