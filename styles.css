@@ -16,6 +16,7 @@
     --section-background-color: rgb(214, 215, 224);
     --header-section-box-shadow: 0 10px 12px rgba(0, 0, 0, 0.1);
     --box-border: 0 0 33px 0 rgba(122, 146, 184, 0.44);
+    --margin-bottom: 30px;
 }
 
 *,
@@ -45,7 +46,7 @@ section {
     background-color: var(--section-background-color);
     border-radius: var(--border-radius);
     padding: 20px;
-    margin-bottom: 40px;
+    margin-bottom: var(--margin-bottom);
     box-shadow: var(--box-shadow);
 }
 
@@ -69,10 +70,11 @@ section h4 {
 section h5 {
     margin-top: 15px;
     margin-bottom: 15px;
+    padding-bottom: 5px;
     font-size: 0.9em;
     color: var(--text-color);
-    padding-bottom: 5px;
 }
+
 
 p {
     margin-top: 1em;
@@ -110,7 +112,7 @@ p {
     background-color: var(--section-background-color);
     box-shadow: var(--box-shadow);
     border-radius: 10px;
-    margin-bottom: 40px;
+    margin-bottom: var(--margin-bottom);
 }
 
 .header-section h1 {
@@ -149,19 +151,12 @@ p {
 /* download-section */
 .download-section {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: var(--margin-bottom);
 }
 
 /* contact-info */
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    box-shadow: var(--box-border);
-    border-radius: 100px;
-    margin-bottom: 20px;
-    max-width: 800px;
+.contact-info h3 {
+    text-align: center;
 }
 
 .contact-info a {
@@ -175,10 +170,24 @@ p {
 
 .contact-button {
     text-align: center;
-    margin-top: 20px;
+    margin-bottom: var(--margin-bottom);
 }
 
 /* experience-table */
+.experience-table {
+    /*margin-top: 20px;*/
+    /*font-size: 1em;*/
+    /*color: var(--text-color);*/
+    /*border-bottom: 2px solid var(--border-color);*/
+    /*width: 100%;*/
+    /*max-width: 800px;*/
+    /*background-color: var(--section-background-color);*/
+    /*border-radius: var(--border-radius);*/
+    padding: 20px;
+    /*margin-bottom: 10px;*/
+    /*box-shadow: var(--box-shadow);*/
+}
+
 .experience-table th, td {
     padding: 10px;
     box-shadow: var(--box-border);
@@ -207,6 +216,7 @@ p {
     list-style-type: none;
     padding-left: 0;
     line-height: 1.8;
+    margin-bottom: var(--margin-bottom);
 }
 
 /* connect-form */
@@ -214,6 +224,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-bottom: var(--margin-bottom);
 }
 
 /* input */
