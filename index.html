@@ -214,32 +214,55 @@
 </body>
 </html>
 <script>
+    
     let currentCenteredElement = null;
     
     function isElementInCenterRange(element) {
         const rect = element.getBoundingClientRect();
-        const screenCenterY = window.innerHeight / 2 - 38;
-        const offset = 38;
+        const screenCenterY = window.innerHeight / 2;
+        const offset = 100;
         return rect.top < screenCenterY + offset && rect.bottom > screenCenterY - offset;
     }
     
     function onScroll() {
         const sectionItems = document.querySelectorAll('.section-item');
         let lastCenteredElement = null;
+        
         sectionItems.forEach((sectionItem) => {
             if (isElementInCenterRange(sectionItem)) {
                 lastCenteredElement = sectionItem;
             }
         });
+        
         if (lastCenteredElement && lastCenteredElement !== currentCenteredElement) {
+            // Убираем классы анимации для предыдущего элемента
             if (currentCenteredElement) {
-                currentCenteredElement.classList.remove('centered');
+                const isCurrentEven = Array.from(sectionItems).indexOf(currentCenteredElement) % 2 === 0;
+                currentCenteredElement.classList.remove('centered', 'enter-from-left', 'enter-from-right');
+                currentCenteredElement.classList.add(isCurrentEven ? 'exit-right' : 'exit-left'); // добавляем класс для скрытия
             }
-            lastCenteredElement.classList.add('centered');
+            
+            // Определяем направление анимации для нового элемента
+            if (lastCenteredElement) {
+                const isEven = Array.from(sectionItems).indexOf(lastCenteredElement) % 2 === 0;
+                lastCenteredElement.classList.remove('off-screen', 'exit-left', 'exit-right'); // убираем классы скрытия, если были
+                lastCenteredElement.classList.add(isEven ? 'enter-from-left' : 'enter-from-right');
+                lastCenteredElement.classList.add('centered');
+            }
+            
             currentCenteredElement = lastCenteredElement;
         }
     }
     
+    // При первой загрузке скрываем элементы за экраном
+    window.addEventListener('load', () => {
+        document.querySelectorAll('.section-item').forEach((sectionItem) => {
+            sectionItem.classList.add('off-screen');
+        });
+    });
+    
     window.addEventListener('scroll', onScroll);
+
+
 </script>
 
