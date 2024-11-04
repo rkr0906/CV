@@ -13,7 +13,7 @@
     --section-background-color: rgb(214, 215, 224);
     --box-border: 0 0 33px 0 rgba(122, 146, 184, 0.44);
     --margin-bottom: 30px;
-    --side-padding: 15px; /* обязательные поля по бокам */
+    --side-padding: 15px;
 }
 
 *,
@@ -29,12 +29,10 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--background-color);
     margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: var(--side-padding);
-    padding-right: var(--side-padding);
+    padding: 0 var(--side-padding);
 }
 
 /* section */
@@ -105,6 +103,44 @@ section strong {
     transform: scale(1.2);
     border-bottom: 4px solid var(--border-color);
 }
+
+/* Начальные стили для скрытия элементов вне экрана */
+.section-item {
+    opacity: 0;
+    transform: translateX(-100vw); /* Изначально все элементы смещены влево за пределы экрана */
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Анимация для выезда слева */
+.section-item.enter-from-left {
+    transform: translateX(0); /* При появлении элемент перемещается на своё место */
+    opacity: 1;
+}
+
+/* Анимация для выезда справа */
+.section-item.enter-from-right {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Анимация для ухода влево */
+.section-item.exit-left {
+    transform: translateX(-100vw); /* Элемент выезжает влево за пределы экрана */
+    opacity: 0;
+}
+
+/* Анимация для ухода вправо */
+.section-item.exit-right {
+    transform: translateX(100vw); /* Элемент выезжает вправо за пределы экрана */
+    opacity: 0;
+}
+
+/* Анимация при переходе в центр */
+.section-item.centered {
+    transform: scale(1.1); /* Увеличиваем масштаб для выделения элемента */
+    opacity: 1;
+}
+
 
 /* header-section */
 .header-section {
@@ -178,17 +214,6 @@ section strong {
 }
 
 /* experience-table */
-.experience-table {
-    /*margin-top: unset;*/
-    /*color: unset;*/
-    /*border-bottom: unset;*/
-    /*background-color: unset;*/
-    /*border-radius: unset;*/
-    /*padding: unset;*/
-    /*margin-bottom: unset;*/
-    /*box-shadow: unset;*/
-}
-
 .experience-table th, td {
     padding: 20px;
     box-shadow: var(--box-border);
